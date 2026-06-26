@@ -112,7 +112,7 @@ export default function Hobbies() {
                 className="absolute inset-0 block size-full"
             />
             <div className="relative z-[2] flex max-w-[640px] flex-col">
-                <h2 className="mb-[52px] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-light">
+                <h2 className="mb-[clamp(32px,6vh,52px)] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-light">
                     Érdeklődési körök
                 </h2>
                 <div className="flex flex-col">

@@ -2,13 +2,13 @@ export default function Hero() {
     return (
         <section
             data-section-index={0}
-            className="relative flex h-screen snap-start items-center gap-[clamp(40px,6vw,100px)] bg-warm px-[clamp(40px,10vw,140px)]"
+            className="relative flex h-dvh snap-start flex-col items-center justify-center gap-[clamp(28px,6vw,100px)] bg-warm px-[clamp(24px,10vw,140px)] py-[clamp(72px,10vh,96px)] text-center md:flex-row md:justify-start md:py-0 md:text-left"
         >
-            <div className="flex flex-1 flex-col">
+            <div className="flex flex-1 flex-col items-center md:items-start">
                 <span className="mb-[20px] block text-[14px] font-normal tracking-[0.18em] text-tan uppercase">
                     Fullstack fejlesztő
                 </span>
-                <h1 className="mb-[36px] text-display leading-[0.95] font-semibold tracking-[-0.03em] text-ink">
+                <h1 className="mb-[clamp(24px,4vh,36px)] text-display leading-[0.95] font-semibold tracking-[-0.03em] text-ink">
                     Felföldi
                     <br />
                     Szabolcs
@@ -32,7 +32,7 @@ export default function Hero() {
             <img
                 src="/cv_photo.jpg"
                 alt="Felföldi Szabolcs"
-                className="size-[clamp(200px,22vw,300px)] shrink-0 rounded-full bg-photo object-cover"
+                className="order-first size-[clamp(150px,38vw,300px)] shrink-0 rounded-full bg-photo object-cover md:order-none"
             />
 
             <div className="animate-scroll-bounce absolute bottom-[36px] left-1/2 flex -translate-x-1/2 flex-col items-center gap-[8px]">

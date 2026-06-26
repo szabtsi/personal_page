@@ -17,7 +17,7 @@ export default function Section({ index, className, children }: SectionProps) {
         <section
             data-section-index={index}
             className={cn(
-                'flex h-screen snap-start items-center px-[clamp(40px,10vw,140px)] py-[100px]',
+                'flex h-dvh snap-start items-center overflow-y-auto px-[clamp(24px,10vw,140px)] py-[clamp(80px,14vh,100px)] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
                 className,
             )}
         >

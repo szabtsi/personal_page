@@ -19,7 +19,7 @@ function EduEntry({
     return (
         <div
             className={cn(
-                'flex items-start gap-[clamp(24px,5vw,72px)] border-b border-divider-edu pb-[44px]',
+                'flex items-start gap-[clamp(20px,5vw,72px)] border-b border-divider-edu pb-[clamp(28px,4vh,44px)]',
                 className,
             )}
         >
@@ -51,7 +51,7 @@ export default function Education() {
     return (
         <Section index={3} className="bg-warm">
             <div className="flex w-full max-w-[740px] flex-col">
-                <h2 className="mb-[52px] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-ink">
+                <h2 className="mb-[clamp(32px,6vh,52px)] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-ink">
                     Tanulmányok
                 </h2>
 
@@ -61,13 +61,13 @@ export default function Education() {
                         degree="Webfejlesztő"
                         institution="Webler Oktatóstúdió"
                         note="OKJ: 55 213 02"
-                        className="mb-[44px]"
+                        className="mb-[clamp(28px,4vh,44px)]"
                     />
                     <EduEntry
                         dates={['2013. szept.', '— 2016. jún.']}
                         degree="Földtudományi kutató"
                         institution="Debreceni Egyetem (BSc)"
-                        className="mb-[48px]"
+                        className="mb-[clamp(32px,5vh,48px)]"
                     />
                 </div>
 

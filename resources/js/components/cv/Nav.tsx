@@ -11,7 +11,7 @@ export default function Nav({ activeSection, onNavigate }: NavProps) {
     const textColor = onDark ? 'text-nav-dark' : 'text-ink';
 
     return (
-        <nav className="pointer-events-none absolute inset-x-0 top-0 z-[200] flex items-center justify-between px-[56px] py-[22px]">
+        <nav className="pointer-events-none absolute inset-x-0 top-0 z-[200] flex items-center justify-between px-[clamp(24px,6vw,56px)] py-[clamp(18px,4vw,22px)]">
             <button
                 type="button"
                 onClick={() => onNavigate(0)}
@@ -22,7 +22,7 @@ export default function Nav({ activeSection, onNavigate }: NavProps) {
             >
                 FSZ
             </button>
-            <div className="pointer-events-auto flex items-center gap-[32px]">
+            <div className="pointer-events-auto hidden items-center gap-[clamp(16px,2.4vw,32px)] sm:flex">
                 {NAV_LABELS.map((label, i) => (
                     <button
                         key={label}

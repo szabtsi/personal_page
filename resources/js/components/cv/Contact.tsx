@@ -67,7 +67,7 @@ export default function Contact() {
     return (
         <Section index={6} className="bg-warm">
             <div className="flex w-full max-w-[700px] flex-col">
-                <h2 className="mb-[52px] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-ink">
+                <h2 className="mb-[clamp(32px,6vh,52px)] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-ink">
                     Kapcsolat
                 </h2>
                 <div className="flex flex-col">
@@ -78,11 +78,11 @@ export default function Contact() {
                             {...(c.external
                                 ? { target: '_blank', rel: 'noreferrer' }
                                 : {})}
-                            className="flex items-center justify-between gap-[20px] border-b border-divider py-[22px] text-body text-ink no-underline"
+                            className="flex items-center justify-between gap-[clamp(12px,3vw,20px)] border-b border-divider py-[clamp(18px,3vh,22px)] text-[15px] text-ink no-underline sm:text-body"
                         >
-                            <span className="flex items-center gap-[16px] font-light">
+                            <span className="flex min-w-0 items-center gap-[clamp(10px,2vw,16px)] font-light">
                                 <ContactIcon name={c.icon} />
-                                {c.value}
+                                <span className="truncate">{c.value}</span>
                             </span>
                             <span className="shrink-0 text-label font-medium tracking-[0.12em] text-tan uppercase">
                                 {c.label}
@@ -90,7 +90,7 @@ export default function Contact() {
                         </a>
                     ))}
                 </div>
-                <p className="mt-[48px] text-label font-light tracking-[0.04em] text-faint">
+                <p className="mt-[clamp(32px,5vh,48px)] text-label font-light tracking-[0.04em] text-faint">
                     © 2026 Felföldi Szabolcs
                 </p>
             </div>

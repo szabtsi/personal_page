@@ -19,18 +19,18 @@ export default function Experience() {
     return (
         <Section index={2} className="bg-dark">
             <div className="flex w-full max-w-[800px] flex-col">
-                <h2 className="mb-[52px] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-light">
+                <h2 className="mb-[clamp(32px,6vh,52px)] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-light">
                     Tapasztalat
                 </h2>
 
                 {/* Job 1 — current */}
-                <div className="mb-[52px] flex gap-[28px]">
+                <div className="mb-[clamp(32px,5vh,52px)] flex gap-[clamp(16px,4vw,28px)]">
                     <div className="flex shrink-0 flex-col items-center pt-[6px]">
                         <div className="size-[7px] shrink-0 rounded-full bg-tan" />
                         <div className="mt-[10px] w-px flex-1 bg-line" />
                     </div>
                     <div className="flex flex-1 flex-col">
-                        <div className="mb-[4px] flex items-baseline justify-between gap-[20px]">
+                        <div className="mb-[4px] flex flex-wrap items-baseline justify-between gap-x-[20px] gap-y-[2px]">
                             <h3 className="text-title font-medium text-light">
                                 Szoftverfejlesztő
                             </h3>
@@ -59,12 +59,12 @@ export default function Experience() {
                 </div>
 
                 {/* Job 2 — freelance */}
-                <div className="flex gap-[28px]">
+                <div className="flex gap-[clamp(16px,4vw,28px)]">
                     <div className="flex shrink-0 flex-col items-center pt-[6px]">
                         <div className="size-[7px] shrink-0 rounded-full border-[1.5px] border-tan" />
                     </div>
                     <div className="flex flex-1 flex-col">
-                        <div className="mb-[4px] flex items-baseline justify-between gap-[20px]">
+                        <div className="mb-[4px] flex flex-wrap items-baseline justify-between gap-x-[20px] gap-y-[2px]">
                             <h3 className="text-title font-medium text-light">
                                 Szabadúszó fejlesztő
                             </h3>

@@ -20,7 +20,7 @@ export default function CV() {
                 <div
                     id="cv-scroll"
                     ref={scrollRef}
-                    className="h-full snap-y snap-mandatory overflow-y-scroll"
+                    className="h-dvh snap-y snap-mandatory overflow-y-scroll"
                 >
                     <Hero />
                     <About />
