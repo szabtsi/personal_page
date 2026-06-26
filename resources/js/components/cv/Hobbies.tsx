@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export default function Hobbies() {
     const [hoveredHobby, setHoveredHobby] = useState<number | null>(null);
-    const [pinnedHobby, setPinnedHobby] = useState<number | null>(null);
+    const [pinnedHobby, setPinnedHobby] = useState<number | null>(0);
     const openHobby = hoveredHobby ?? pinnedHobby;
     const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -105,57 +105,105 @@ export default function Hobbies() {
     }, []);
 
     return (
-        <Section index={5} className="relative overflow-hidden bg-space">
+        <Section
+            index={5}
+            className="relative items-start overflow-hidden bg-space md:items-center"
+        >
             <canvas
                 ref={canvasRef}
                 id="star-canvas"
                 className="absolute inset-0 block size-full"
             />
-            <div className="relative z-[2] flex max-w-[640px] flex-col">
+            <div className="relative z-[2] flex w-full max-w-[920px] flex-col">
                 <h2 className="mb-[clamp(32px,6vh,52px)] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-light">
                     Érdeklődési körök
                 </h2>
-                <div className="flex flex-col">
-                    {HOBBIES.map((hobby, i) => {
-                        const open = openHobby === i;
+                <div className="flex flex-col gap-[clamp(20px,4vh,36px)] md:flex-row md:gap-[clamp(40px,5vw,72px)]">
+                    {/* Titles */}
+                    <div className="flex flex-col md:w-[256px] md:shrink-0">
+                        {HOBBIES.map((hobby, i) => {
+                            const active = openHobby === i;
 
-                        return (
-                            <div
-                                key={hobby.title}
-                                onMouseEnter={() => setHoveredHobby(i)}
-                                onMouseLeave={() => setHoveredHobby(null)}
-                                onClick={() =>
-                                    setPinnedHobby((p) => (p === i ? null : i))
-                                }
-                                className={cn(
-                                    'flex cursor-pointer flex-col border-t border-divider-space py-[20px]',
-                                    i === HOBBIES.length - 1 && 'border-b',
-                                )}
-                            >
-                                <span
+                            return (
+                                <div
+                                    key={hobby.title}
                                     className={cn(
-                                        'text-title font-light tracking-[-0.01em] transition-colors duration-300',
-                                        open ? 'text-light' : 'text-space-fg',
+                                        'border-t border-divider-space',
+                                        i === HOBBIES.length - 1 && 'border-b',
                                     )}
                                 >
-                                    {hobby.title}
-                                </span>
-                                <div
-                                    className="overflow-hidden"
-                                    style={{
-                                        maxHeight: open ? '160px' : 0,
-                                        opacity: open ? 1 : 0,
-                                        transition:
-                                            'max-height 0.45s ease, opacity 0.35s ease',
-                                    }}
-                                >
-                                    <p className="mt-[12px] max-w-[560px] text-body leading-[1.7] font-light [text-wrap:pretty] text-hobby-body">
-                                        {hobby.body}
-                                    </p>
+                                    <button
+                                        type="button"
+                                        onMouseEnter={() => setHoveredHobby(i)}
+                                        onMouseLeave={() =>
+                                            setHoveredHobby(null)
+                                        }
+                                        onClick={() =>
+                                            setPinnedHobby((p) =>
+                                                p === i ? null : i,
+                                            )
+                                        }
+                                        aria-pressed={active}
+                                        className={cn(
+                                            'flex w-full cursor-pointer items-center justify-between gap-[16px] py-[18px] text-left text-title font-light tracking-[-0.01em] transition-colors duration-300',
+                                            active
+                                                ? 'text-light'
+                                                : 'text-space-fg',
+                                        )}
+                                    >
+                                        {hobby.title}
+                                        <span
+                                            aria-hidden="true"
+                                            className={cn(
+                                                'shrink-0 text-tan transition-all duration-300',
+                                                active
+                                                    ? 'translate-x-0 opacity-100'
+                                                    : '-translate-x-[6px] opacity-0',
+                                            )}
+                                        >
+                                            →
+                                        </span>
+                                    </button>
+
+                                    {/* Inline body — mobile only (accordion under
+                                        the title). Desktop uses the side panel. */}
+                                    <div
+                                        className="overflow-hidden md:hidden"
+                                        style={{
+                                            maxHeight: active ? '320px' : 0,
+                                            opacity: active ? 1 : 0,
+                                            transition:
+                                                'max-height 0.45s ease, opacity 0.35s ease',
+                                        }}
+                                    >
+                                        <p className="pb-[20px] text-body leading-[1.7] font-light [text-wrap:pretty] text-hobby-body">
+                                            {hobby.body}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
+
+                    {/* Description side panel — desktop only. Grid stacks all
+                        bodies in one cell, so its height equals the tallest body
+                        and never shifts. */}
+                    <div className="hidden flex-1 md:grid md:pt-[18px]">
+                        {HOBBIES.map((hobby, i) => (
+                            <p
+                                key={hobby.title}
+                                aria-hidden={openHobby !== i}
+                                className={cn(
+                                    'max-w-[520px] text-body leading-[1.7] font-light [text-wrap:pretty] text-hobby-body transition-opacity duration-500 [grid-area:1/1]',
+                                    openHobby === i
+                                        ? 'opacity-100'
+                                        : 'pointer-events-none opacity-0',
+                                )}
+                            >
+                                {hobby.body}
+                            </p>
+                        ))}
+                    </div>
                 </div>
             </div>
         </Section>
