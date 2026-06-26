@@ -17,7 +17,7 @@ export default function Section({ index, className, children }: SectionProps) {
         <section
             data-section-index={index}
             className={cn(
-                'flex h-dvh snap-start items-center overflow-y-auto px-[clamp(24px,10vw,140px)] pt-[clamp(72px,11vh,88px)] pb-[clamp(44px,7vh,64px)] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
+                'flex min-h-dvh items-center px-[clamp(24px,10vw,140px)] pt-[clamp(72px,11vh,88px)] pb-[clamp(44px,7vh,64px)] md:h-dvh md:snap-start md:overflow-y-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden',
                 className,
             )}
         >

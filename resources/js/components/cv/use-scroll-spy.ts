@@ -12,12 +12,9 @@ export function useScrollSpy(threshold = 0.55) {
     const navTo = (index: number) => {
         const container = scrollRef.current;
 
-        if (container) {
-            container.scrollTo({
-                top: index * container.clientHeight,
-                behavior: 'smooth',
-            });
-        }
+        container
+            ?.querySelector(`[data-section-index="${index}"]`)
+            ?.scrollIntoView({ behavior: 'smooth' });
     };
 
     useEffect(() => {
@@ -27,30 +24,50 @@ export function useScrollSpy(threshold = 0.55) {
             return;
         }
 
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        const index = parseInt(
-                            (entry.target as HTMLElement).dataset
-                                .sectionIndex ?? '',
-                            10,
-                        );
+        const desktop = window.matchMedia('(min-width: 768px)');
 
-                        if (!isNaN(index)) {
-                            setActiveSection(index);
+        const observe = () => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            const index = parseInt(
+                                (entry.target as HTMLElement).dataset
+                                    .sectionIndex ?? '',
+                                10,
+                            );
+
+                            if (!isNaN(index)) {
+                                setActiveSection(index);
+                            }
                         }
-                    }
-                });
-            },
-            { threshold, root: container },
-        );
+                    });
+                },
+                // On desktop the container itself scrolls; on mobile the
+                // document scrolls, so observe against the viewport.
+                { threshold, root: desktop.matches ? container : null },
+            );
 
-        container
-            .querySelectorAll('[data-section-index]')
-            .forEach((el) => observer.observe(el));
+            container
+                .querySelectorAll('[data-section-index]')
+                .forEach((el) => observer.observe(el));
 
-        return () => observer.disconnect();
+            return observer;
+        };
+
+        let observer = observe();
+
+        const onBreakpointChange = () => {
+            observer.disconnect();
+            observer = observe();
+        };
+
+        desktop.addEventListener('change', onBreakpointChange);
+
+        return () => {
+            observer.disconnect();
+            desktop.removeEventListener('change', onBreakpointChange);
+        };
     }, [threshold]);
 
     return { scrollRef, activeSection, navTo };

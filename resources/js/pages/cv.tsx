@@ -15,12 +15,12 @@ export default function CV() {
     return (
         <>
             <Head title="Felföldi Szabolcs — Fullstack fejlesztő" />
-            <div className="fixed inset-0 overflow-hidden">
+            <div className="md:fixed md:inset-0 md:overflow-hidden">
                 <Nav activeSection={activeSection} onNavigate={navTo} />
                 <div
                     id="cv-scroll"
                     ref={scrollRef}
-                    className="h-dvh snap-y snap-mandatory overflow-y-scroll"
+                    className="md:h-dvh md:snap-y md:snap-mandatory md:overflow-y-scroll"
                 >
                     <Hero />
                     <About />

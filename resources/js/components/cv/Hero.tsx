@@ -2,7 +2,7 @@ export default function Hero() {
     return (
         <section
             data-section-index={0}
-            className="relative flex h-dvh snap-start flex-col items-center justify-center gap-[clamp(28px,6vw,100px)] bg-warm px-[clamp(24px,10vw,140px)] py-[clamp(72px,10vh,96px)] text-center md:flex-row md:justify-start md:py-0 md:text-left"
+            className="relative flex min-h-dvh flex-col items-center justify-center gap-[clamp(28px,6vw,100px)] bg-warm px-[clamp(24px,10vw,140px)] py-[clamp(72px,10vh,96px)] text-center md:h-dvh md:snap-start md:flex-row md:justify-start md:py-0 md:text-left"
         >
             <div className="flex flex-1 flex-col items-center md:items-start">
                 <span className="mb-[20px] block text-[14px] font-normal tracking-[0.18em] text-tan uppercase">
