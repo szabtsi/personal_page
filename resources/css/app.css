@@ -5,7 +5,81 @@
 
 @theme {
     --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
-        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
+        'DM Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* Type scale — produces text-display, text-h2, text-body, etc. */
+    --text-display: clamp(42px, 6vw, 82px);
+    --text-h2: clamp(32px, 4vw, 52px);
+    --text-title: 20px;
+    --text-body: 18px;
+    --text-meta: 14px;
+    --text-label: 11px;
+    --text-tag: 14px;
+
+    /* Surfaces */
+    --color-warm: #f5f0eb;
+    --color-warm-alt: #faf7f3;
+    --color-dark: #2c2c2c;
+    --color-space: #060612;
+
+    /* Foreground */
+    --color-ink: #2c2c2c;
+    --color-copy: #5c5045;
+    --color-muted: #8c7b6e;
+    --color-light: #f0ebe3;
+    --color-space-fg: #c8c2d8;
+    --color-nav-dark: #e8e2d8;
+    --color-faint: #bfb0a4;
+    --color-edu-date: #a89485;
+    --color-bullet: #5a4f47;
+    --color-proj: #7a6e8a;
+    --color-hobby-body: #9a93ad;
+
+    /* Accent */
+    --color-tan: #c4a882;
+
+    /* Skill chips */
+    --color-skill-bg: #eae2d8;
+    --color-skill-text: #3a3028;
+
+    /* Dividers / lines */
+    --color-divider: #ddd5cb;
+    --color-divider-edu: #e0d8ce;
+    --color-divider-space: #1a1830;
+    --color-line: #3e3830;
+
+    /* Misc */
+    --color-photo: #e8e0d6;
+}
+
+@keyframes scrollBounce {
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(5px);
+    }
+}
+
+.animate-scroll-bounce {
+    animation: scrollBounce 2.4s ease-in-out infinite;
+}
+
+/* Snap scroll container — hide scrollbar */
+#cv-scroll {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+#cv-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
 }
