@@ -1,5 +1,6 @@
 import { Head } from '@inertiajs/react';
 import About from '@/components/cv/About';
+import ChatWidget from '@/components/cv/ChatWidget';
 import Contact from '@/components/cv/Contact';
 import Education from '@/components/cv/Education';
 import Experience from '@/components/cv/Experience';
@@ -30,6 +31,7 @@ export default function CV() {
                     <Hobbies />
                     <Contact />
                 </div>
+                <ChatWidget />
             </div>
         </>
     );
