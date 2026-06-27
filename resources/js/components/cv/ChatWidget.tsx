@@ -171,7 +171,7 @@ export default function ChatWidget() {
                     {messages.length === 0 ? (
                         <div className="flex flex-col gap-[14px]">
                             <p className="text-[15px] leading-[1.5] text-copy">
-                                Igen, nem vicc, egy chatbot. Kérdezz rólam bátran.
+                                Igen, nem vicc, egy chatbot. Kérdezz rólam bátran. Ingyenes modell, fennakadások előfordulhatnak, kérem szíves megértésed.
                             </p>
 
                             {accepted ? (
