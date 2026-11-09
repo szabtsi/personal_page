@@ -3,11 +3,12 @@
 ## At a glance
 
 - **Name:** Felföldi Szabolcs
-- **Role:** Fullstack fejlesztő (fullstack developer)
+- **Role:** Fullstack webfejlesztő (fullstack web developer), 2022 óta a szakmában, elsősorban PHP/Laravel és React alapokon
 - **Current employer:** Wenerate Kft. — Szoftverfejlesztő, 2023. január – jelenleg
-- **Also:** Szabadúszó fejlesztő (freelance developer), 2022 –
-- **Location / languages:** Magyar (anyanyelv), English
-- **Contact:** szabolcs.felfoldi10@gmail.com · GitHub: szabtsi · LinkedIn: szabolcs-felföldi
+- **Also:** Szabadúszó webfejlesztő (freelance web developer), 2022 – jelenleg
+- **Location / languages:** Dunaharaszti · Magyar (anyanyelv), Angol (C1 felsőfok)
+- **Contact:** szabolcs.felfoldi10@gmail.com · +36 30 665 6634 · felfoldiszabolcs.hu · GitHub: szabtsi · LinkedIn: szabolcs-felföldi
+- **Profile (from CV):** A Wenerate Kft.-nél egy energiamenedzsment szoftvert fejleszt, ahol a funkciók megvalósítása mellett a fejlesztői környezet, a kódminőség és a csapat munkafolyamatainak alakításában is szerepet vállal. Erőssége, hogy az üzleti és mérnöki igényeket jól karbantartható, tesztelt megoldásokká alakítja.
 
 ## About me
 
@@ -39,24 +40,38 @@ Fontosnak tartom a környezetvédelmet, fenntarthatóságot, tudatosságot. Igye
 
 A Wenerate Kft. egy kicsi startup cég, egy tucat emberrel. Egy energetikai vonatkozású szoftvert fejlesztünk. A szoftver célja, hogy hardveres mérési támogatással rá tudjunk mutatni olyan fájdalompontokra nagyfogyasztóknál, ahol energiát, ezzel együtt kiadást és CO2 fogyasztást is csökkenthetnek. A fejlesztett applikáció egy Laravel alapú progresszív webapp, React frontenddel. Először csak a Laravel oldalra alkalmaztak, de rövid időn belül fullstack fejlesztő lettem. Kis cég révén, valamint a munkához való hozzáállásom miatt részt vettem a tervezési folyamatokban is.
 
+Főbb eredmények, felelősségi körök (a CV alapján):
+
+- **Fullstack fejlesztés:** az energiamenedzsment szoftver funkcióinak fejlesztése PHP/Laravel és React alapokon.
+- **Energetikai számítások:** algoritmusok megvalósítása energetikai mérnökökkel, valós mérési adatokra építve; a gépvizsgálati funkciók önálló fejlesztése.
+- **Fejlesztői környezet:** Docker-alapú, microservice architektúrájú környezet kialakítása, amely gyorsabbá és reprodukálhatóvá tette a fejlesztést.
+- **Automatizált tesztelés:** unit- és feature tesztek bevezetése (PHPUnit/Pest).
+- **Kódminőség:** egy túlterhelt legacy adatbázistábla szétválasztása felelősségi körök szerint; statikus analízis, típusdeklarációk és code review bevezetése.
+- **Folyamatok és csapat:** fejlesztési folyamatok kialakítása, ügyféligények összehangolása a fejlesztéssel, új kollégák betanítása.
+- **AI-támogatott fejlesztés:** AI coding agentek (pl. Claude Code) tudatos bevonása a csapat fejlesztési folyamataiba.
+
 Rengeteg funkciót fejlesztettem a szoftverben, egészen egyszerű felületektől kezdve, statisztikai, grafikonos kimutatásokon keresztül egy kvázi vizuális energetikai vonatkozási programozási felületig. Fontosnak tartom az írott kód minőségét és olvashatóságát, inkább töltök több időt a tervezéssel, minthogy spagettikódot szállítsak le. Igyekszem követni a főbb Laravel-es konvenciókat, MVC modell, route model binding, queued jobs és worker-ek, event listener, observer, authorizáció, request validáció, cache. Azt még nem döntöttem el, hogy Service Class vagy Action Class párti vagyok - talán függ a projekt jellegétől is. Munkám során a legmodernebb AI eszközöket használom, mint a Claude Code. Munkám során elengedhetetlennek tartom az automatizált tesztek írását, és a megfelelő tartalmú, tájékoztató kommenteket, dokumentációkat. Igyekszem jól dokumentált, értelmes, akár képekkel gazdagított PR leírásokat készíteni, de ezek nagyban függhetnek a fejlesztő csapat igényeitől, szokásaitól is, amikhez gond nélkül tudok alkalmazkodni.
 
-### Szabadúszó fejlesztő (2022 –)
+### Szabadúszó webfejlesztő (2022 – jelenleg)
+
+Weboldalak és webalkalmazások teljes körű fejlesztése közvetlen ügyfélkapcsolattal, az igényfelméréstől az élesítésig. Referenciák: origotalent.com, feriagumis.hu, koselakautosiskola.hu, szereteterod-tsmt.hu.
+
 
 Első projektem az édesapám gumijavító vállalkozásának készített időpontfoglaló rendszer (https://feriagumis.hu/), amit azóta is aktívan használnak a helyi lakosok. Készítettem több kisebb vállalkozás számára bemutatkozó oldalakat is. A legbüszkébb az Origo filmstúdiónak készített webalkalmazás (https://origotalent.com/), ami egy kb. színészeknek és gyártóknak készített portfolio oldal, amiről cikkeztek is a filmes szférában. A teljes munkaidős állás mellett nem vállalok már új, saját projekteket, szeretnék teljes odafigyeléssel a munkámra fókuszálni, és a szabadidőmben a családommal lenni. Egy-két meglévő baráti projektem van, amit viszek, de ezek minimális odafigyelést igényelnek.
 
 ## Skills
 
-- **Frontend:** HTML, CSS / SCSS, JavaScript, React, Bootstrap, Inertia, Tailwind, Blade, Livewire
+- **Frontend:** React, JavaScript, Inertia, Tailwind, HTML, CSS / SCSS, Bootstrap, Blade
   A frontend skill-jeim, főleg a design-t illetően szerintem gyengébbek, mint a backend skillek. Alapvetően kedvelem a React rendszereket, 3+ éve használom napi szinten a React-ot. Az 2026-ban elkezdtem a Livewire-el is ismerkedni, mivel a PHP/Laravel környezetben érzem magam leginkább otthon. Alapvetően, ha új projektet kezdek, React-ot választom, mert abban van a legtöbb tapasztalatom. Igyekszem követni a SOLID elveket, custom hook-okba szervezni a jellemző logikákat, elkülönítve a render fájloktól. Gyakran igényelt, több szinten szükséges adatot kontextusokba szervezem, valamint dolgoztam már react router-rel is.
-- **Backend:** PHP, Laravel, MySQL, NodeRED, Redis, APIs
+- **Backend:** PHP, Laravel, Livewire, Filament, APIs
   A backend-et előnyben részesítem a frontend-del szemben, magabiztosabban mozgok Laravel-es környezetben, mint például React-ben. 3+ éve fejlesztek Laravel keretrendszerben, ezalatt megismerkedtem szinte az összes területével, mint MVC model, routing, authentikáció, authorizáció, request validáció, cache, eloquent, queue job-ok, websocket (reverb), és még sok más.
-- **Tools / other:** Git, Docker, automatizált tesztelés, Laravel Cloud, Laravel Forge, ClickUp, Claude
+- **Databases:** MySQL, PostgreSQL, Redis
+- **Tools / operations:** Docker, Git, automatizált tesztelés (PHPUnit/Pest), statikus analízis, Node-RED, Laravel Cloud, Laravel Forge, ClickUp, Claude Code / AI agentek
   A saját projektjeimet is csak verziókezelten fejlesztek, értelmes, visszakövethető commitokkal. Mivel nem vagyok DevOps fejlesztő, előszeretettel használom a Forge vagy Laravel Cloud szolgáltatásokat hosting-ra, de volt már szerencsém VPS-t is konfigurálni Laraveles applikációkra. A mindennapi munkámmal kapcsolatos feladatokat, projekteket ClickUp-ban menedzselem. A konténerizáció, Docker nagyon érdekel, szívesen mélyíteném el benne a tudásom - a jelenlegi munkahelyemen foglalkoztam dockerizálással, létrehoztam egy több service-t átívelő (laravel, react, nodered, postgre, mysql, reverb) dockerizált környezetet
 
 ## Education
 
-- Webfejlesztő — Webler Oktatóstúdió (2022. szept. – 2023. jún., OKJ 55 213 02)
+- Webfejlesztő — Webler Oktatóstúdió (2022. szept. – 2023. június, OKJ 55 213 02)
 - Földtudományi kutató — Debreceni Egyetem, BSc (2013. szept. – 2016. jún.)
 - Kéttannyelvű vegyész - Erdey-Grúz Tibor Vegyipari Szakközépiskola, Debrecen
 - Arany János Általános Iskola, Ebes

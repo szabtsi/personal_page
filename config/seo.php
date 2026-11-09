@@ -17,7 +17,7 @@ return [
 
     'title' => 'Felföldi Szabolcs — Fullstack fejlesztő',
 
-    'description' => 'Felföldi Szabolcs fullstack webfejlesztő. Laravel, PHP, React és Inertia alapú backend és frontend fejlesztés, AI-alapú eszközökkel a mindennapi munkában.',
+    'description' => 'Felföldi Szabolcs fullstack webfejlesztő. PHP/Laravel, Livewire, Filament, React, Inertia és Tailwind alapú fejlesztés, Docker, automatizált tesztelés és AI coding agentek a mindennapi munkában.',
 
     // Relative path resolved against APP_URL for og:image / twitter:image.
     'image' => '/cv_photo.jpg',

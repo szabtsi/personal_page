@@ -82,7 +82,10 @@ export default function Education() {
                         </span>
                         <span className="block h-[14px] w-px bg-divider" />
                         <span className="text-body font-normal text-ink">
-                            Angol
+                            Angol{' '}
+                            <span className="font-light text-muted">
+                                (C1 felsőfok)
+                            </span>
                         </span>
                     </div>
                 </div>

@@ -8,22 +8,20 @@ export default function About() {
                     Rólam
                 </h2>
                 <p className="text-body leading-[1.72] font-light [text-wrap:pretty] text-copy">
-                    Gyerekkorom óta elhivatott vagyok az informatika iránt.
-                    Tapasztalt fullstack webfejlesztőként az önálló tanulás
-                    erejében és a folyamatos fejlődésben hiszek. Szakmai
-                    alapjaimat a Webler Oktatóstúdió webfejlesztő kurzusán
-                    fektettem le, majd 2023 januárjában csatlakoztam a Wenerate
-                    Kft.-hez, ahol a gyors tanulási készségemnek köszönhetően
-                    junior backend fejlesztőből rövid időn belül fullstack
-                    fejlesztővé léptem elő.
+                    Fullstack webfejlesztő vagyok, 2022 óta dolgozom a
+                    szakmában, elsősorban PHP/Laravel és React alapokon. A
+                    Wenerate Kft.-nél egy energiamenedzsment szoftvert
+                    fejlesztek, ahol a funkciók megvalósítása mellett a
+                    fejlesztői környezet, a kódminőség és a csapat
+                    munkafolyamatainak alakításában is szerepet vállalok.
                 </p>
                 <p className="text-body leading-[1.72] font-light [text-wrap:pretty] text-copy">
-                    Munkám során magabiztosan mozgok mind a backend, mind a
-                    frontend oldalon, és a mindennapi fejlesztésbe az AI-alapú
-                    eszközöket is hatékonyan beépítem. Eredetileg reál területen
-                    – labortechnikusnak és geológusnak (BSc) – tanultam, ami
-                    kiváló analitikus gondolkodást és rendszerszemléletet adott
-                    a programozáshoz.
+                    Erősségem, hogy más szakterületek üzleti és mérnöki igényeit jól
+                    karbantartható, tesztelt megoldásokká alakítom. A mindennapi
+                    fejlesztésbe az AI coding agenteket is tudatosan beépítem.
+                    Eredetileg reál területen – geológusnak (BSc) – tanultam,
+                    ami erős analitikus gondolkodást és rendszerszemléletet
+                    adott a programozáshoz.
                 </p>
             </div>
         </Section>

@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { PROJECT_LINKS } from '@/components/cv/data';
+import { PROJECT_LINKS, WENERATE_RESPONSIBILITIES } from '@/components/cv/data';
 import Section from '@/components/cv/Section';
 
 function Responsibility({ children }: { children: ReactNode }) {
@@ -42,18 +42,14 @@ export default function Experience() {
                             Wenerate Kft.
                         </p>
                         <div className="flex flex-col gap-[10px]">
-                            <Responsibility>
-                                Új funkciók tervezése, fejlesztése és tesztelése
-                            </Responsibility>
-                            <Responsibility>
-                                Meglévő funkciók refaktorálása
-                            </Responsibility>
-                            <Responsibility>
-                                Részvétel termékfejlesztésben
-                            </Responsibility>
-                            <Responsibility>
-                                Új kollégák betanítása, oktatása
-                            </Responsibility>
+                            {WENERATE_RESPONSIBILITIES.map((item) => (
+                                <Responsibility key={item.title}>
+                                    <span className="font-normal text-light">
+                                        {item.title}:
+                                    </span>{' '}
+                                    {item.body}
+                                </Responsibility>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -66,7 +62,7 @@ export default function Experience() {
                     <div className="flex flex-1 flex-col">
                         <div className="mb-[4px] flex flex-wrap items-baseline justify-between gap-x-[20px] gap-y-[2px]">
                             <h3 className="text-title font-medium text-light">
-                                Szabadúszó fejlesztő
+                                Szabadúszó webfejlesztő
                             </h3>
                             <span className="shrink-0 text-meta font-light whitespace-nowrap text-muted">
                                 2022 —
@@ -74,6 +70,11 @@ export default function Experience() {
                         </div>
                         <p className="mb-[20px] text-meta font-normal tracking-[0.07em] text-muted uppercase">
                             Egyéni projektek
+                        </p>
+                        <p className="mb-[16px] text-body leading-[1.6] font-light text-faint">
+                            Weboldalak és webalkalmazások teljes körű
+                            fejlesztése közvetlen ügyfélkapcsolattal, az
+                            igényfelméréstől az élesítésig.
                         </p>
                         <div className="flex flex-col gap-[8px]">
                             {PROJECT_LINKS.map((url) => (

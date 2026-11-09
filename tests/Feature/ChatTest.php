@@ -104,3 +104,11 @@ it('pauses the chat once the global daily cap is reached', function () {
 it('serves the privacy policy page', function () {
     $this->get('/privacy')->assertSuccessful();
 });
+
+it('grounds the agent in the skills listed on the CV', function () {
+    $instructions = (new AboutMeAgent)->instructions();
+
+    expect($instructions)
+        ->toContain('Livewire', 'Filament', 'PostgreSQL', 'Pest', 'Claude Code', 'C1 felsőfok')
+        ->toContain('energiamenedzsment szoftver');
+});

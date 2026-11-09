@@ -8,7 +8,7 @@ export default function Skills() {
                 <h2 className="mb-[clamp(32px,6vh,52px)] text-h2 leading-[1.1] font-medium tracking-[-0.02em] text-ink">
                     Készségek
                 </h2>
-                <div className="grid grid-cols-1 gap-[clamp(28px,4vw,60px)] sm:grid-cols-3">
+                <div className="grid grid-cols-1 gap-[clamp(28px,4vw,60px)] sm:grid-cols-2 lg:grid-cols-4">
                     {SKILL_GROUPS.map((group) => (
                         <div
                             key={group.label}

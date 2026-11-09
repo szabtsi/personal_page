@@ -14,23 +14,71 @@ export type SkillGroup = {
 
 export const SKILL_GROUPS: SkillGroup[] = [
     {
+        label: 'Backend',
+        items: ['PHP', 'Laravel', 'Livewire', 'Filament'],
+    },
+    {
         label: 'Frontend',
         items: [
+            'React',
+            'JavaScript',
+            'Inertia',
+            'Tailwind',
             'HTML',
             'CSS / SCSS',
-            'JavaScript',
-            'React',
             'Bootstrap',
-            'Inertia',
         ],
     },
     {
-        label: 'Backend',
-        items: ['PHP', 'Laravel', 'MySQL', 'Redis', 'Node-RED'],
+        label: 'Adatbázisok',
+        items: ['MySQL', 'PostgreSQL', 'Redis'],
     },
     {
-        label: 'Eszközök',
-        items: ['Git', 'Docker', 'ClickUp', 'AI integráció'],
+        label: 'Eszközök és működés',
+        items: [
+            'Docker',
+            'Git',
+            'Pest / PHPUnit',
+            'Node-RED',
+            'ClickUp',
+            'Claude Code / AI agentek',
+        ],
+    },
+];
+
+export type WorkHighlight = {
+    title: string;
+    body: string;
+};
+
+export const WENERATE_RESPONSIBILITIES: WorkHighlight[] = [
+    {
+        title: 'Fullstack fejlesztés',
+        body: 'az energiamenedzsment szoftver funkcióinak fejlesztése PHP/Laravel és React alapokon.',
+    },
+    {
+        title: 'Energetikai számítások',
+        body: 'algoritmusok megvalósítása energetikai mérnökökkel, valós mérési adatokra építve; a gépvizsgálati funkciók önálló fejlesztése.',
+    },
+    {
+        title: 'Fejlesztői környezet',
+        body: 'Docker-alapú, microservice architektúrájú környezet kialakítása, amely gyorsabbá és reprodukálhatóvá tette a fejlesztést.',
+    },
+    {
+        title: 'Automatizált tesztelés',
+        body: 'unit- és feature tesztek bevezetése (PHPUnit/Pest).',
+    },
+    {
+        title: 'Kódminőség',
+        body: 'egy túlterhelt legacy adatbázistábla szétválasztása felelősségi körök szerint; statikus analízis, típusdeklarációk és code review bevezetése.',
+    },
+    {
+        title: 'Folyamatok és csapat',
+        body: 'fejlesztési folyamatok kialakítása, ügyféligények összehangolása a fejlesztéssel, új kollégák betanítása.',
+    },
+    {
+        title: 'AI-támogatott fejlesztés',
+        body: 'AI coding agentek tudatos bevonása a csapat fejlesztési folyamataiba.',
     },
 ];
 
